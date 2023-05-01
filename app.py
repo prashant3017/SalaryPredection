@@ -1,8 +1,6 @@
 import pickle
 import streamlit as st
 
-model = pickle.load(open('model/random.pkl', 'rb'))
-
 BOARD_LIST_10 = [
     'Andhra Pradesh Board',
     'Bihar Board',
@@ -266,7 +264,7 @@ def get_degree(option):
 
 
 def predict_salary(data):
-    model = pickle.load(open('model/random.pkl', 'rb'))
+    model = pickle.load(open('random.pkl', 'rb'))
     prediction = model.predict([data])
     return prediction[0]
 
